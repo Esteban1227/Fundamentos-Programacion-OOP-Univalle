@@ -1,0 +1,4 @@
+﻿  pry_salario.cpp
+D:\Users\charr\Escritorio\Universidad del valle\desarrollo-software\Segundo-Semestre\Fundamentos-Programacion-OOP\pry_salario\pry_salario.cpp(52,46): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+D:\Users\charr\Escritorio\Universidad del valle\desarrollo-software\Segundo-Semestre\Fundamentos-Programacion-OOP\pry_salario\pry_salario.cpp(137,52): warning C4244: 'argumento': conversión de 'float' a 'int'; posible pérdida de datos
+  pry_salario.vcxproj -> D:\Users\charr\Escritorio\Universidad del valle\desarrollo-software\Segundo-Semestre\Fundamentos-Programacion-OOP\pry_salario\x64\Debug\pry_salario.exe
