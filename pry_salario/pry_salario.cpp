@@ -1,6 +1,3 @@
-// pry_salario.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
-//
-
 #include <iostream>
 #include <string>
 
@@ -100,14 +97,15 @@ bool class_validacion::met_validar_salario_mensual(int var_salario_mensual) {
 #pragma region class_lectura_dato
 
 class class_lectura_dato {
-public:
-    int atr_identifiacion = 0;
-    string atr_nombre = "";
-    int atr_numero_dias_trbajo_mes = 0;
-    int atr_numero_hijos = 0;
-    float atr_salario_mensual = 0;
+    public:
+        int atr_identifiacion = 0;
+        string atr_nombre = "";
+        int atr_numero_dias_trbajo_mes = 0;
+        int atr_numero_hijos = 0;
+        float atr_salario_mensual = 0;
 
-    void met_pedir_dato();
+        void met_pedir_dato();
+        void met_mostrar_dato();
 
 };
 
@@ -146,6 +144,10 @@ void class_lectura_dato::met_pedir_dato() {
         return;
     }
 
+    met_mostrar_dato();
+}
+
+void class_lectura_dato::met_mostrar_dato() {
     class_calculo obj_calculo = class_calculo(atr_numero_dias_trbajo_mes, atr_numero_hijos, atr_salario_mensual);
     obj_calculo.met_calcular();
 
@@ -154,14 +156,12 @@ void class_lectura_dato::met_pedir_dato() {
     std::cout << "Nombre : " << atr_nombre << std::endl;
     std::cout << "Numero de dias que trabaja al mes: " << atr_numero_dias_trbajo_mes << std::endl;
     std::cout << "Numero de hijos que tiene: " << atr_numero_hijos << std::endl;
-    std::cout << "Su salario actual es: $" << atr_numero_hijos << std::endl;
+    std::cout << "Su salario mensual es: $" << atr_salario_mensual << std::endl;
     std::cout << "---Estos son los resultados---:" << std::endl;
     std::cout << "El salario por dia es: $" << obj_calculo.atr_salario_dia << std::endl;
     std::cout << "El salario neto es: $" << obj_calculo.atr_salario_neto << std::endl;
     std::cout << "El subsidio familiar es: $" << obj_calculo.atr_subsidio_familiar << std::endl;
     std::cout << "El salario total recibido es: $" << obj_calculo.atr_total_recibido << std::endl;
-
-
 }
 
 #pragma endregion
